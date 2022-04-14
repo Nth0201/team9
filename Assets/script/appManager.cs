@@ -107,7 +107,12 @@ public class appManager : MonoBehaviour
         }
 
     public void buttonclickedone(){
-        
+         if( clickaction.character == 1){
+           
+        }else{
+           boy.SetActive(true);
+           boy.SetActive(false);
+        }
     }
 
     public void buttonclickedtwo(){
