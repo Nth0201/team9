@@ -121,7 +121,24 @@ public class appManager : MonoBehaviour
 
     public void callback(){
         golbal.scene++; // need to see girl or boy to do adjustment
-        golbal.health = -50; // see if they have hurt during the conversion
+        //golbal.health = -50; // see if they have hurt during the conversion
           SceneManager.LoadScene("play_scene", LoadSceneMode.Additive);
         }
+
+    public void buttonclickedone(){
+        if(clickaction.character == 1){
+           
+        }else{
+           
+        }
+    }
+
+    public void buttonclickedtwo(){
+        if(clickaction.character == 1){
+           
+        }else{
+           
+        }
+    }
+
 }
