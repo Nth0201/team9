@@ -11,7 +11,7 @@ public class healthBar : MonoBehaviour
     {
         slider.maxValue = 100;
         slider.minValue = 0;
-        slider.value = 100; 
+        slider.value = golbal.health; 
     }
     public void SetHelth( int health)
     {
@@ -21,4 +21,5 @@ public class healthBar : MonoBehaviour
     {
         return slider.value;
     }
+
 }

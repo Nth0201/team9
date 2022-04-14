@@ -13,7 +13,9 @@ public class player : MonoBehaviour
     // Start is called before the first frame update
     public void Awake()
     {
+        playerContoller.instance.gameObject.SetActive(true);
         play_animation = playerContoller.instance.gameObject.GetComponent<Animator>();
+
     }
     private void FixedUpdate()
     {
