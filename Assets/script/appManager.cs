@@ -21,6 +21,10 @@ public class appManager : MonoBehaviour
             background.GetComponent<Image>().sprite = backgroundDiffHand[i];
         }   
 
+        if(){
+            
+        }
+
         
 
 
