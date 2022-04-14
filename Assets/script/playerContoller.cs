@@ -11,6 +11,7 @@ public class playerContoller : MonoBehaviour
     [SerializeField] string[] labels;
     [SerializeField] private GameObject[] hair;
     public static playerContoller instance;
+    public static int skincode;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +32,7 @@ public class playerContoller : MonoBehaviour
             spriteResolver[2].SetCategoryAndLabel("Hand", "Layer 45");
             spriteResolver[3].SetCategoryAndLabel("Leg", "Layer 36");
             spriteResolver[4].SetCategoryAndLabel("Leg", "Layer 42");
+            PlayerPrefs.setInt("skincode", 1);
         });
         button[1].onClick.AddListener(delegate {
             spriteResolver[0].SetCategoryAndLabel(spriteResolver[0].GetCategory(), "Head 2");
@@ -38,6 +40,7 @@ public class playerContoller : MonoBehaviour
             spriteResolver[2].SetCategoryAndLabel("Hand", "Layer 44");
             spriteResolver[3].SetCategoryAndLabel("Leg", "Layer 35");
             spriteResolver[4].SetCategoryAndLabel("Leg", "Layer 41");
+            PlayerPrefs.setInt("skincode", 2);
         });
         button[2].onClick.AddListener(delegate {
             spriteResolver[0].SetCategoryAndLabel(spriteResolver[0].GetCategory(), "Head 3");
@@ -45,16 +48,19 @@ public class playerContoller : MonoBehaviour
             spriteResolver[2].SetCategoryAndLabel("Hand", "Layer 43");
             spriteResolver[3].SetCategoryAndLabel(spriteResolver[3].GetCategory(), "Layer 34");
             spriteResolver[4].SetCategoryAndLabel(spriteResolver[4].GetCategory(), "Layer 40");
+            PlayerPrefs.setInt("skincode", 3);
         });
 
         button[3].onClick.AddListener(delegate {
             spriteResolver[5].SetCategoryAndLabel(spriteResolver[5].GetCategory(), "Layer 22");
             spriteResolver[6].SetCategoryAndLabel(spriteResolver[5].GetCategory(), "Layer 23");
 
+
         });
         button[4].onClick.AddListener(delegate {
             spriteResolver[5].SetCategoryAndLabel(spriteResolver[5].GetCategory(), "Layer 24");
             spriteResolver[6].SetCategoryAndLabel(spriteResolver[5].GetCategory(), "Layer 25");
+            
         });
         button[5].onClick.AddListener(delegate {
             spriteResolver[5].SetCategoryAndLabel(spriteResolver[5].GetCategory(), "Layer 26");
@@ -189,6 +195,7 @@ public class playerContoller : MonoBehaviour
             });
             
         }
+
     
     
     }

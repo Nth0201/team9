@@ -10,6 +10,7 @@ public class styleSelector : MonoBehaviour
     GameObject style;
     GameObject button;
     GameObject tmp;
+    
 
     public void Awake()
     {
@@ -47,7 +48,6 @@ public class styleSelector : MonoBehaviour
 
     public void skin_color()
     {
-
         button.SetActive(false);
         style.SetActive(false);
         tmp = stylelist[3];
