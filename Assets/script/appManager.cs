@@ -16,9 +16,9 @@ public class appManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        boyresult.setActive(false);
-        girlresult.setActive(false);
-        int skincode = PlayerPrefs.setInt("skincode", 1);
+        boyresult.SetActive(false);
+        girlresult.SetActive(false);
+        int skincode = playerContoller.skincode;
         if(skincode == 1){
             background.GetComponent<Image>().sprite = backgroundDiffHand[0];
         }else if(skincode == 2){
@@ -128,7 +128,7 @@ public class appManager : MonoBehaviour
         }
 
     public void buttonclickedone(){
-        if(clickaction.character == 1){
+        if(clickAction.characher == 1){
             //golbal.health -= 30; 
             callback();
         }else{
@@ -138,7 +138,7 @@ public class appManager : MonoBehaviour
     }
 
     public void buttonclickedtwo(){
-        if(clickaction.character == 1){
+        if(clickAction.characher == 1){
            //golbal.health -= 50;
            callback();
         }else{
