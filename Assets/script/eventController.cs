@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class eventController : MonoBehaviour
 {
     [SerializeField] private Sprite phone_up;
@@ -46,5 +47,8 @@ public class eventController : MonoBehaviour
                     bed.GetComponent<Image>().sprite = bed_up;
             }
         }
+    }
+    public void changeScene() {
+        SceneManager.LoadScene("app_screen");
     }
 }

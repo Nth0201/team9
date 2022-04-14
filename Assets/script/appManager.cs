@@ -12,18 +12,7 @@ public class appManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        int skincode = PlayerPrefs.setInt("skincode", 1);
-        if(skincode == 1){
-            background.GetComponent<Image>().sprite = backgroundDiffHand[i];
-        }elseif(skincode == 2){
-            background.GetComponent<Image>().sprite = backgroundDiffHand[i];
-        }elseif(skincode == 3){
-            background.GetComponent<Image>().sprite = backgroundDiffHand[i];
-        }   
 
-        if(){
-            
-        }
 
         
 
