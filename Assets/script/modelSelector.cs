@@ -19,7 +19,7 @@ public class modelSelector : MonoBehaviour
             //load character asset
             for (int i = 0; i < 8; i++) {
 
-                gameObject[i].GetComponent<Image>().sprite = boys_style[i];
+                //gameObject[i].GetComponent<Image>().sprite = boys_style[i];
 
             }
         }
@@ -30,7 +30,7 @@ public class modelSelector : MonoBehaviour
             for (int i = 0; i < 8; i++)
             {
 
-                gameObject[i].GetComponent<Image>().sprite = girls_style[i];
+               // gameObject[i].GetComponent<Image>().sprite = girls_style[i];
 
             }
         }
@@ -38,8 +38,5 @@ public class modelSelector : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 }

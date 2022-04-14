@@ -55,6 +55,36 @@ public class styleSelector : MonoBehaviour
         okBtn.SetActive(true);
     }
 
+    public void browsSelection()
+    {
+
+        button.SetActive(false);
+        style.SetActive(false);
+        tmp = stylelist[4];
+        stylelist[4].SetActive(true);
+        okBtn.SetActive(true);
+    }
+
+    public void blushesSelection()
+    {
+
+        button.SetActive(false);
+        style.SetActive(false);
+        tmp = stylelist[5];
+        stylelist[5].SetActive(true);
+        okBtn.SetActive(true);
+    }
+
+    public void OtherSelection()
+    {
+
+        button.SetActive(false);
+        style.SetActive(false);
+        tmp = stylelist[6];
+        stylelist[6].SetActive(true);
+        okBtn.SetActive(true);
+    }
+
     public void Okbtn() {
         okBtn.SetActive(false);
         tmp.SetActive(false);
