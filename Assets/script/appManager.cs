@@ -11,6 +11,7 @@ public class appManager : MonoBehaviour
     [SerializeField] private GameObject[] girlfirstblackbox;
     [SerializeField] private GameObject[] boyfirstblackbox;
     [SerializeField] private GameObject girl,boy;
+    [SerializeField] private GameObject girl,boy;
     [SerializeField] private Sprite[] genders;
     int timable = 0;
     // Start is called before the first frame update
@@ -80,6 +81,7 @@ public class appManager : MonoBehaviour
                 } 
             callback();
         }elseif(scene == 5){
+
                 callback();
         }
  
