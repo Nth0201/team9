@@ -10,7 +10,7 @@ public class appManager : MonoBehaviour
     [SerializeField] private GameObject background;
     [SerializeField] private GameObject[] girlfirstblackbox;
     [SerializeField] private GameObject[] boyfirstblackbox;
-    [SerializeField] private GameObject gender;
+    [SerializeField] private GameObject girl,boy;
     [SerializeField] private Sprite[] genders;
     int timable = 0;
     // Start is called before the first frame update
@@ -26,9 +26,11 @@ public class appManager : MonoBehaviour
         }   
 
         if( clickaction.character == 1){
-             gender.GetComponent<Image>().sprite = genders[0];
+           girl.SetActive(true);
+           boy.SetActive(false);
         }else{
-            gender.GetComponent<Image>().sprite = genders[1];
+           boy.SetActive(true);
+           boy.SetActive(false);
         }
         
         if(scene == 1){
