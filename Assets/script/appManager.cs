@@ -10,107 +10,93 @@ public class appManager : MonoBehaviour
     [SerializeField] private GameObject background;
     [SerializeField] private GameObject[] girlfirstblackbox;
     [SerializeField] private GameObject[] boyfirstblackbox;
-    [SerializeField] private GameObject gender;
+    [SerializeField] private GameObject girl,boy;
+    [SerializeField] private GameObject girl,boy;
     [SerializeField] private Sprite[] genders;
-    double timable = 0;
+    int timable = 0;
     // Start is called before the first frame update
     void Start()
     {
-        int skincode = playerContoller.skincode;
+        int skincode = PlayerPrefs.setInt("skincode", 1);
         if(skincode == 1){
             background.GetComponent<Image>().sprite = backgroundDiffHand[0];
-        }else if(skincode == 2){
+        }elseif(skincode == 2){
             background.GetComponent<Image>().sprite = backgroundDiffHand[1];
-        }else if(skincode == 3){
+        }elseif(skincode == 3){
             background.GetComponent<Image>().sprite = backgroundDiffHand[2];
         }   
 
-        if( clickAction.characher == 1){
-             gender.GetComponent<Image>().sprite = genders[0];
+        if( clickaction.character == 1){
+           girl.SetActive(true);
+           boy.SetActive(false);
         }else{
-            gender.GetComponent<Image>().sprite = genders[1];
+           boy.SetActive(true);
+           boy.SetActive(false);
         }
+        
+        if(scene == 1){
+            if(clickaction.character == 1){
+              for (int i = 0; i < 4;i++){
+                if(timable = 5){
+                     girlfirstblackbox[i].SetActive(false);
+                }
+               }
+                callback();
+            }else{
+               for (int i = 0; i < 3;i++){
+                boyfirstblackbox[i].SetActive(false);
+               } 
+            }
+            callback();
+           
+        }elseif(scene  == 2){
+            if(clickaction.character == 1){
+                for (int i = 4; i < 8;i++){
+                   if(timable = 5){
+                    girlfirstblackbox[i].SetActive(false);
+                    }
+                } 
+            }else{
+                for (int i = 3; i < 6;i++){
+                   boyfirstblackbox[i].SetActive(false);
+                } 
+            }
+            callback();
+        }elseif(scene  == 3){
+            if(clickaction.character == 1){
+                for (int i = 8; i < 10;i++){
+                    if(timable = 5){
+                     girlfirstblackbox[i].SetActive(false);
+                }
+                } 
+            }else{
+                for (int i = 6; i < 13;i++){
+                    boyfirstblackbox[i].SetActive(false);
+                } 
+            }
+            callback();
+        }elseif(scene == 4){
+            for (int i = 13; i < 4;i++){
+                    boyfirstblackbox[i].SetActive(false);
+                } 
+            callback();
+        }elseif(scene == 5){
+
+                callback();
+        }
+ 
+       
+
+
+
+
                                    
     }
 
     // Update is called once per frame
     void Update()
     {
-        timable += Time.deltaTime;
-
-        if (golbal.scene == 1)
-        {
-            if (clickAction.characher == 1)
-            {
-                for (int i = 0; i < 4; i++)
-                {
-                    if (timable == 5)
-                    {
-                        girlfirstblackbox[i].SetActive(false);
-                    }
-                }
-                callback();
-            }
-            else
-            {
-                for (int i = 0; i < 3; i++)
-                {
-                    boyfirstblackbox[i].SetActive(false);
-                }
-            }
-            callback();
-
-        }
-        else if(golbal.scene == 2){
-            if (clickAction.characher == 1)
-            {
-                for (int i = 4; i < 8; i++)
-                {
-                    if (timable == 5)
-                    {
-                        girlfirstblackbox[i].SetActive(false);
-                    }
-                }
-            }
-            else
-            {
-                for (int i = 3; i < 6; i++)
-                {
-                    boyfirstblackbox[i].SetActive(false);
-                }
-            }
-            callback();
-        }
-        else if(golbal.scene == 3){
-            if (clickAction.characher == 1)
-            {
-                for (int i = 8; i < 10; i++)
-                {
-                    if (timable == 5)
-                    {
-                        girlfirstblackbox[i].SetActive(false);
-                    }
-                }
-            }
-            else
-            {
-                for (int i = 6; i < 13; i++)
-                {
-                    boyfirstblackbox[i].SetActive(false);
-                }
-            }
-            callback();
-        }
-        else if(golbal.scene == 4){
-            for (int i = 13; i < 4; i++)
-            {
-                boyfirstblackbox[i].SetActive(false);
-            }
-            callback();
-        }
-        else if(golbal.scene == 5){
-            callback();
-        }
+        timable += Time.delltTime;
     }
 
 
